@@ -19,12 +19,16 @@ class Solution:
                         return False
                 else:
                     return False
+            elif q.left is not None:
+                return False
             if p.right is not None:
                 if q.right is not None:
                     if not checkTree(p.right, q.right):
                         return False
                 else:
                     return False
+            elif q.right is not None:
+                return False
             return True
 
         return checkTree(p, q)
